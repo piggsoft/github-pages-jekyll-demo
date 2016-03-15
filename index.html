@@ -18,7 +18,7 @@ description: "陈谣"
             {{ post.content | strip_html | truncate:150 }}
         </div>
     </a>
-    <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
+    <p class="post-meta">{% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} 发表于  {{ post.date | date: "%Y-%m-%d" }}</p>
 </div>
 
 <hr>
